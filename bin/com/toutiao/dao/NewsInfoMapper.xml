@@ -363,4 +363,22 @@
       next_max_behot_time = #{nextMaxBehotTime,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  <select id="queryNewsBySingleCondition" parameterType="com.toutiao.pojo.NewsInfo" resultMap="BaseResultMap">
+  	select * from news_info where tag = #{tag} limit 10
+  </select>
+  
+  
+  
+  <select id="queryTotalNumOfTag" parameterType="java.lang.String" resultType="java.lang.Integer">
+  	select max(ID) from news_info where tag = #{tag}
+  </select>
+  
+   <select id="querystartNumOfTag" parameterType="java.lang.String" resultType="java.lang.Integer">
+  	select min(ID) from news_info where tag = #{tag}
+  </select>
+  
+  <select id="queryNewsByPage" resultMap="BaseResultMap">
+  	SELECT * FROM news_info WHERE tag=#{tag} LIMIT #{start},#{pageShow}
+  </select>
 </mapper>

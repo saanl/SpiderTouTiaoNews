@@ -95,4 +95,14 @@ public interface NewsInfoMapper {
      * @mbggenerated Mon Feb 26 11:37:33 CST 2018
      */
     int updateByPrimaryKey(NewsInfo record);
+
+	List<NewsInfo> queryNewsBySingleCondition(NewsInfo news);
+
+	Integer queryTotalNumOfTag(String tag);
+
+	Integer querystartNumOfTag(String tag);
+
+	List<NewsInfo> queryNewsByPage(@Param("tag") String tag,@Param("start") Integer start, @Param("pageShow") Integer pageShow);
+	
+	
 }
