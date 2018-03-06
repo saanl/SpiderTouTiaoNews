@@ -118,7 +118,7 @@ public class Spider {
 			news.setLittleimageurl(littleimageurl_.length()>100? "":littleimageurl_);
 			news.setSourceurl(sourceurl_);
 			
-			news.setTag(CAR);
+			news.setTag(SPORT);
 			
 			news.setTitle(title_.length()>100? title_.substring(0, 99):title_);
 			
@@ -169,7 +169,7 @@ public class Spider {
 			//System.out.println(asandcp[0]+"||"+asandcp[1]);
 			System.out.println("第"+i+1);
 			Thread.sleep(1000);
-			s.getInfo(CAR,max_behot_time_next,max_behot_time_next,asandcp[0],asandcp[1],"RN6O1wAAHk-4p2SrXHek40Tejs");
+			s.getInfo(SPORT,max_behot_time_next,max_behot_time_next,asandcp[0],asandcp[1],"RN6O1wAAHk-4p2SrXHek40Tejs");
 			//记得修改news中tag属性
 		}
 	}
